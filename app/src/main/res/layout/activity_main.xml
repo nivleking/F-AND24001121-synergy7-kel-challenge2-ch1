@@ -11,7 +11,7 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHALLENGE 2"
+        android:text="@string/title"
         android:textSize="32dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Cost of service"
+            android:hint="@string/cost_of_service_hint"
             android:inputType="numberDecimal" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -53,7 +53,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:text="How was the service?"
+        android:text="@string/how_was_the_service"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/costOfServiceContainer" />
     />
@@ -72,19 +72,19 @@
             android:id="@+id/radio_button_1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Amazing (20%)" />
+            android:text="@string/amazing_service" />
 
         <RadioButton
             android:id="@+id/radio_button_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Good (18%)" />
+            android:text="@string/good_service" />
 
         <RadioButton
             android:id="@+id/radio_button_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="OK (15%)" />
+            android:text="@string/ok_service" />
     </RadioGroup>
 
     <LinearLayout
@@ -102,7 +102,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Round up tip? " />
+            android:text="@string/round_up_tip" />
 
         <com.google.android.material.materialswitch.MaterialSwitch
             android:id="@+id/roundUpSwitch"
@@ -118,7 +118,7 @@
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculate"
+        android:text="@string/calculate"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tipAmount" />
