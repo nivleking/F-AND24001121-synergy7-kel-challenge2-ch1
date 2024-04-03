@@ -11,24 +11,10 @@ import com.google.android.material.materialswitch.MaterialSwitch
 import com.google.android.material.textfield.TextInputEditText
 import java.util.Locale
 import android.os.LocaleList
+import com.binar.challenge2.Model.Tip
+import com.binar.challenge2.Tools.goToAnotherActivityWithBundle
 
 class MainActivity : AppCompatActivity() {
-
-//    private fun setLocale(lang: String) {
-//        val currentLocale = resources.configuration.locales.get(0)
-//        if (!currentLocale.language.equals(lang)) {
-//            val locale = Locale(lang)
-//            Locale.setDefault(locale)
-//            val config = Configuration()
-//
-//            config.setLocale(locale)
-//            config.setLocales(LocaleList(locale))
-//
-//            baseContext.createConfigurationContext(config)
-//
-//            recreate()
-//        }
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,6 +51,12 @@ class MainActivity : AppCompatActivity() {
             } else {
                 currentTotal.text = "Total: Rp${total.toInt()}"
             }
+            val onlyTip = total - cost
+            val tip = Tip(cost.toInt(), onlyTip)
+            val bundle = Bundle()
+            bundle.putParcelable("tip", tip)
+
+            goToAnotherActivityWithBundle(this, SecondPage::class.java, bundle)
         }
     }
 }
